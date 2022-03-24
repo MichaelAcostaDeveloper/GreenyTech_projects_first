@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=StyleSheet href="/styles/coupons_discount_style.css" type="text/css" media=screen>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Coupons-discounts</title>
+</head>
+<body>
+    <div class="main_container">
+            <div class="container_branch">
+                <p class="title">Calculator of Coupons and discounts</p>
+                <div class="titles">
+                    <img src="/icons-logos/image.svg" alt="logo">
+                    <p>By GreenyTech</p>
+                </div>
+            </div>
+            <div class="container_solution">
+                <div class="container_coupons">
+                        <label for="coupons_product" class="coupons">Select one of our coupons:</label>
+                        <select class="coupons_product" name="Coupons" onclick="select_coupon()" id="bx">
+                            <option value="You do not have coupons" id="option">No have</option>
+                            <option value="Your coupon is the 10%" id="option">Basic</option>
+                            <option value="Your coupon is the 15%" id="option">Platinium</option>
+                            <option value="Your coupon is the 20%" id="option">Gold</option>
+                            <option value="Your coupon is the 30%"id="option">Premium</option>
+                        </select>
+                </div>
+                <form class="form">
+                    <div class="container_business">
+                        <label for="price_prodcut" class="label">Price of the product $ :</label>
+                        <input id="price_product" type="number" class="input" placeholder="Example 45.89">
+                        <label for="discount" class="label">Discount of the product % :</label>
+                        <input id="discount" type="number" class="input" placeholder="Only the number">
+                        <p class="coupon_selected" id="coupon_selected"></p>
+                        <div class="button_container">
+                            <button type="button" onclick="calculate_new_price()">Calculate the new value</button>
+                        </div>
+                        <div class="result_container">
+                            <p id="resultados"></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </div>
+    <script src="/logic/coupons.js"></script>
+</body>
+</html>
