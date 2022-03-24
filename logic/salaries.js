@@ -57,7 +57,7 @@ function calculate_capacity(){
             Number(elemento5.value)+
             Number(elemento6.value);
     let answer=Number(sueldo.value)-sum;
-    answer=answer*0.38;
+    answer=(answer*0.38).toFixed(1);
     console.log(sum);
     console.log(answer);
 
